@@ -1,8 +1,40 @@
 body{
-	background-color : #00EEAA;
+	background-color : #CCEEDD;
 }
-
+#page{
+	}
+#content{
+	width : 800px;
+	min-height : 500px;
+	margin : auto;
+	}
+#ban{
+	width : 100%;
+	height: 100px;
+	background-color : #DDEEFF;
+	text-align : center;
+	}
+#footer{
+	background-color : #DDEEFF;
+	}
+#sidebar{
+	background-color : #555555;
+	display : block;
+	float : left;
+	width : 160px;
+	min-height : 400px;
+	}
+#sidebar.ul{
+    }
+#article{
+	width : 640px;
+	display : block;
+	float : right;
+	}
 h1{
 	color : navy;
 	margin-left : 20px;
 }
+p{
+	text-align : justify;
+	}
