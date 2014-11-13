@@ -1,3 +1,4 @@
+<?php include 'session.inc'; check_login(); ?>
 <html>
 	<head>
 		<title>Cas Stage : site statique</title>
@@ -6,6 +7,9 @@
 	</head>
 	<body>
 		<div id="page">
-			<div id="ban"><h1>Cas Stage</h1></div>
+			<div id="ban">
+				<h1>Cas Stage</h1>
+				<p>Connecté en tant que <?php echo $_SESSION['username']; ?>, id : <?php echo $_SESSION['id']; ?></p>
+			</div>
 			<div id="content">
 				<div id="article">

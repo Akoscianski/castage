@@ -4,16 +4,21 @@ body{
 #page{
 	}
 #content{
-	width : 800px;
+	width : 1000px;
 	min-height : 500px;
 	margin : auto;
+	background : #FFFFFF;
 	}
 #ban{
 	width : 100%;
 	height: 100px;
-	background-color : #DDEEFF;
+	background : #00EEFF url('/img/isty_logo.png') no-repeat right top;
 	text-align : center;
 	}
+#ban p{
+	text-align : center;
+	font-style : italic;
+}
 #footer{
 	background-color : #DDEEFF;
 	}
@@ -21,15 +26,39 @@ body{
 	background-color : #555555;
 	display : block;
 	float : left;
-	width : 160px;
+	width : 260px;
 	min-height : 400px;
 	}
-#sidebar.ul{
-    }
+#navigation{
+	width : 250px;
+	list-style:none;
+	margin : 0;
+	padding: 5px;
+}
+#navigation li{
+	background-color : #555555;
+	color : #FFCCCC;
+	border: 1px solid #000000;
+	margin-bottom : 1px;
+	padding : 0px;
+}
+#navigation li a{
+	display: block;
+	color : #CCCCCC;
+	font: 1em "Trebuchet MS", Arial,sans-serif;
+	line-height: 1em;
+	text-align : left;
+	text-decoration : none;
+	padding : 4px 0;
+}
+#navigation li a:hover{
+	background-color : #995555;
+}
 #article{
-	width : 640px;
+	width : 730px;
 	display : block;
 	float : right;
+	padding : 4px;
 	}
 h1{
 	color : navy;
