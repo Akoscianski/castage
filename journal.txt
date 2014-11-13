@@ -1,1 +1,2 @@
 12/11/2014 - Arnaud : initialisation du dépôt Git et mise en place de la structure php (avec css minimum).
+13/11/2014 - Arnaud : Mise en place des BD internes (scripts sql) et mise en place de la connexion sur le site (navigation en session php).
