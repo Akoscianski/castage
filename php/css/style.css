@@ -15,7 +15,11 @@ body{
 	background : #00EEFF url('/img/isty_logo.png') no-repeat right top;
 	text-align : center;
 	}
-#ban p{
+#ban a{
+	color : #000000;
+	text-decoration : none;
+	}
+#ban a p{
 	text-align : center;
 	font-style : italic;
 }

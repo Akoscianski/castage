@@ -8,8 +8,10 @@
 	<body>
 		<div id="page">
 			<div id="ban">
-				<h1>Cas Stage</h1>
-				<p>Connecté en tant que <?php echo $_SESSION['username']; ?>, id : <?php echo $_SESSION['id']; ?></p>
+				<a href="./index.php">
+					<h1>Cas Stage</h1>
+					<p>Connecté en tant que <?php echo $_SESSION['username']; ?>, id : <?php echo $_SESSION['id']; ?></p>
+				</a>
 			</div>
 			<div id="content">
 				<div id="article">
