@@ -6,11 +6,5 @@ CREATE TABLE notif(
 	notification varchar(256)
 	);
 
-CREATE TRIGGER trg_notif_date
-AFTER INSERT ON notif FOR EACH ROW
-DECLARE
-	NewId notif.IdNotif%TYPE := new.IdNotif;
-BEGIN
-	UPDATE notification SET NDate = NOW() WHERE IdNotif=NewId;
-END;
-/
+CREATE TRIGGER trg_notif_date BEFORE INSERT ON notif
+FOR EACH ROW SET NEW.NDate = NOW();

@@ -1,6 +1,6 @@
 CREATE TABLE entreprise(
 	IdEntreprise INT PRIMARY KEY AUTO_INCREMENT,
-	Nom char(20)
+	Nom char(50)
 	);
 
 CREATE TABLE offres_stages(
