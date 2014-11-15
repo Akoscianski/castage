@@ -264,38 +264,3 @@ if(typeof escapeHtmlEntities == 'undefined') {
             8364 : 'euro'
         };
     }
-
-function affiche_bouton()
-{ 
-   var Checked=1;
-   var nb_cara_intitule;
-   var nb_cara_entreprise;
-   var intitule = document.getElementById("intitule").value;
-   var entreprise = document.getElementById("entreprise").value;
-   
-   $nb_cara_intitule = escapeHtmlEntities(document.getElementById("intitule").value).length;
-   if($nb_cara_intitule >=50){
-	   document.getElementById("intitule").className="erreur";
-   }else{
-	   document.getElementById("intitule").className="";
-	   $nb_cara_entreprise = escapeHtmlEntities(document.getElementById("entreprise").value).length;
-	   if($nb_cara_entreprise >= 50){
-		   document.getElementById("entreprise").className="erreur";
-	   }else{
-			document.getElementById("entreprise").calssName="";
-		   for (i=0; i<document.getElementsByTagName("input").length; i++){
-			  if(document.getElementsByTagName("input")[i].value == "")
-				Checked=0;
-			}
-			if(document.getElementById("textarea").value == "")
-				Checked=0;
-		 
-		   if (Checked == 1)
-		   {
-			  document.getElementById('submit1').disabled='';
-		   } else {
-			  document.getElementById('submit1').disabled='true';
-		   }
-	   }
-	}
-}

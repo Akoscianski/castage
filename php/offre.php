@@ -7,11 +7,11 @@
 		<table>
 			<tr>
 				<td>Intitulé</td>
-				<td><input type="text" name="intitule" onBlur=affiche_bouton() /></td>
+				<td><input type="text" name="intitule"  id="intitule" onBlur=affiche_bouton() /></td>
 			</tr>
 			<tr>
 				<td>Entreprise</td>
-				<td><input type="text" name="entreprise" onBlur=affiche_bouton() /></td>
+				<td><input type="text" name="entreprise" id="entreprise" onBlur=affiche_bouton() /></td>
 			</tr>
 			<tr>
 				<td>Description</td>
