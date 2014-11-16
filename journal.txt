@@ -60,3 +60,4 @@
 13/11/2014 - Arnaud : Mise en place des BD internes (scripts sql) et mise en place de la connexion sur le site (navigation en session php).
 15/11/2014 - Arnaud : Ajout d'offres de stages et début de l'implantation de la visualisation des offres
 16/11/2014 - Arnaud : début de l'implémentation des notifications
+16/11/2014 - Arnaud : Implémentation des notifications finie.

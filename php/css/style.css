@@ -14,6 +14,7 @@ body{
 	min-height : 500px;
 	margin : auto;
 	background : #FFFFFF;
+	text-align : justify;
 	}
 #ban{
 	width : 100%;
@@ -32,6 +33,9 @@ body{
 #menunotif{
 	display : block;
 	float : right;
+	position : relative;
+	top : -21px;
+	right : -100px;
 	width : 300px;
 	height : 30px;
 	}
@@ -51,7 +55,7 @@ body{
 #listenotif{
 	display : block;
 	position : absolute;
-	top : 107px;
+	top : 117px;
 	right : 15px;
 	width : 300px;
 	height : 300px;
@@ -59,7 +63,7 @@ body{
 	border : 1px solid black;
 	overflow : hidden;
 	}
-.notification{
+.notification1{
 	display : block;
 	width : 100%;
 	height : 43px;
@@ -70,6 +74,19 @@ body{
 	overflow: hidden;
 	-o-text-overflow: ellipsis; /* pour Opera 9 */
 	text-overflow: ellipsis; /* pour le reste du monde */
+	}
+.notification0{
+	display : block;
+	width : 100%;
+	height : 43px;
+	border : 1px solid black;
+	text-align : left;
+	font-size : 0.8em;
+	padding : 3px;
+	overflow: hidden;
+	-o-text-overflow: ellipsis; /* pour Opera 9 */
+	text-overflow: ellipsis; /* pour le reste du monde */
+	background : #FFFFAA;
 	}
 #footer{
 	background-color : #DDEEFF;

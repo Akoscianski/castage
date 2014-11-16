@@ -21,7 +21,7 @@
 			<?php
 				$db= mysql_connect('localhost','castage','castage');
 				mysql_select_db('castage',$db);
-				$sql="SELECT s.IdOffre, e.Nom, s.Intitule, LEFT(s.Description,70) FROM offres_stages s, entreprise e WHERE s.IdEntreprise = e.IdEntreprise AND s.IdUser = ".$_SESSION['id']."";
+				$sql="SELECT s.IdOffre, e.Nom, s.Intitule, LEFT(s.Description,70) FROM offres_stages s, entreprise e WHERE s.IdEntreprise = e.IdEntreprise AND s.IdUser = ".$_SESSION['id']." ORDER BY IdOffre DESC";
 				$req=mysql_query($sql);
 			?>
 			<?php if(mysql_num_rows($req) > 0): ?>
