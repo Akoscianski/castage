@@ -1,12 +1,24 @@
 <html>
 	<head>
 		<title>Cas Stage : site statique</title>
+		<script src="/js/jQuery.js"></script>
+		<script type="text/javascript" src='/js/notifications.js'></script>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<meta charset="UTF-8">
 	</head>
 	<body>
 		<div id="page">
-			<div id="ban"><h1>Cas Stage</h1></div>
+			<div id="ban">
+				<h1>Cas Stage</h1>
+				<div id="menunotif">
+					<div id="butnotif" onClick="javascript:btn_notif();" >25 notifications</div>
+				</div>
+				<div id="listenotif" style="display:none;">
+					<div class="notification">Et encore une notification encore plus longue que la précédente par ce que voilà quoi, il faut bien voir ce que celà donne si ça dépasse du cadre par ce que j'aime bien mettre des notifications dx fois plus longues que les notifs normales !</div>
+					<div class="notification">notif 1</div>
+					<div class="notification">Une autre notification un peu plus longue par ce que j'ai quand même prévu de pouvoir en mettre pas mal là dedans...</div>
+				</div>
+			</div>
 			<div id="content">
 				<div id="article">
 					<h2>Site statique</h2>
