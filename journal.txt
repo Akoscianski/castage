@@ -1,3 +1,61 @@
+﻿23/10/2014 - Anis, Emmanuel : 1ère séance avec le professeur Réponses aux questions
+	_Qui sont les utilisateurs finaux ?(administration uniquement effectivement le JAVA suffit mais s'il y a les élèves une interface web en Php serait à envisager)
+		Faire application web avec ce que l'on veut. Juste schéma de classes.
+	
+	_Clarifier les tuteurs entreprise et tuteurs scolaires(confusion entre les deux dans certaines appellations)
+		Tuteur entreprise = encadrant
+		Tuteur scolaire = tuteur
+	
+	_La récupération des données utiles(informations sur les étudiants,...) pose la question de l'import des données pour éviter l'entrée à la main de chaque étudiant.
+		Problème de l'intégration, cohérence de l'information quand elle doit être exploitée. A intégrer dès la conception mais pas coder de suite. Utilisation de jeux de tests uniquement.
+	
+	_Problème de redondance de données avec certaines situations : un responsable de stage change d'entreprise, il est dans deux entrées à la fois.
+		Pas de possibilités de conclusion juste prise acte. Donc deux entrées mais pas de suppressions.
+
+	_Jusqu'où va la collecte d'informations ? Qui à un droit de regard dessus ?
+		Un responsable de stage a accès a tout, un élève est propriétaire de ses offres de stages.
+	
+	_Les propositions sont envoyées à la commission des stages, quelles sont les informations que l'élève transmet ?
+		Juste objet et l'interaction
+
+	_Nombre de validation de sujets de stages par la commission : quelle méthode de choix du nombre?Par élève? Par an ?
+		Pour une campagne de stage et fixé par le responsable des stages.
+
+	_Le stage est considéré comme acquis quand la convention est signée par les trois parties : est-ce équivalent à l'ouverture du stage ?
+		Quand le stage démarre, il y a ouverture. Ne pas se focaliser dessus mais plutôt sur les interactions possibles.
+
+	_Gestion des tuteurs scolaires : les tuteurs ont un libre-arbitre mais que faire pour les élèves qui se retrouvent sans tuteurs ?
+		Le tuteur par défaut est le responsable de stage
+
+	_La limite du nombre de sujet par tuteur scolaire est-elle fixée par année civile, scolaire ou révisée au cours de l'année selon les cas ?
+		Fixé pour une campagne de stage par le responsable des stages.
+
+	_Les différents rapports que doivent fournir les élèves ou tuteurs sont-ils simplement enregistrés dans la base de données ou doivent-ils être consultables ?
+		Les rapports doivent être consultables par les personnes qui en ont le besoin
+
+	_Lors de l'interruption d'un stage, le temps stage est-il compté comme interrompu ou annulé?Doit-on permettre à l'élève d'effectuer le temps restant ou recommencer le stage à zéro ?
+		Tout est possible → l'administration(responsable des stages,....) gère ceci 
+
+	_De quelles personnes est composé le jury ?
+		Il faut juste enregistrer qui est présent.
+
+	_Lors d'un stage à l'étranger comment se passe la visite ?
+		Le tuteur doit avoir un contact de quelque nature que ce soit(téléphone,skype,mission à l'étranger,...)
+10/11/2014 - Anis, Arnaud, Emmanuel : 2ème séance avec le professeur
+	_Procédure : un point d'entrée
+	_Demande d'annulation -> demande de convention (-> est conditionné à)
+	_Validation -> demande de validation
+	_Description offre stage --> constituer un catalogue (-->finalité)
+	_Demande de validation de stage --> approbation de l'os par la commission
+	_Demande de convention --> obtenir un contrat(approbation des parties prenantes pour obtenir ce contrat)
+	_types événements : demande d'annulation de validation OS,validation du stage par comission, refus du os par commission.
+	_notification auprès la commission des stages, acquitement auprès de l'utilisateur
+	_réactions après annulation : acquitement de la demande annulation
+	_notification, acquitement pour approbation ou refus et prévenir élève
+	_pour approbation : ressource(demande validation) + condition(vérification d'annulation)
+	_Comment les membres de la commission valident-ils une OS? Quand un membre de la commission a approuvé ou non c'est définitif mais possibilité de demande d'avis.
+		personne qui est responsable des stages est membre de la commission
+	_type d'effet,type d'évènement,notification,acquitement
 12/11/2014 - Arnaud : initialisation du dépôt Git et mise en place de la structure php (avec css minimum).
 13/11/2014 - Arnaud : Mise en place des BD internes (scripts sql) et mise en place de la connexion sur le site (navigation en session php).
 15/11/2014 - Arnaud : Ajout d'offres de stages et début de l'implantation de la visualisation des offres
