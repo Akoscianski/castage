@@ -61,4 +61,7 @@
 15/11/2014 - Arnaud : Ajout d'offres de stages et début de l'implantation de la visualisation des offres
 16/11/2014 - Arnaud : début de l'implémentation des notifications
 16/11/2014 - Arnaud : Implémentation des notifications finie.
+17/11/2014 - Arnaud,Anis,Emmanuel : 3ème séance avec le professeur
+	2 remarques sur le contenu proposé par Arnaud : - Mettre un message pour une offre de stage enregistrée
+							- Proposition de créer un répertoire pour une interaction au lieu de répertoires pour chaques types de fichiers.
 19/11/2014 - Anis : Installation environnement logiciel
