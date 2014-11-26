@@ -1,5 +1,12 @@
 <?php include("./functions.php"); ?>
 <?php get_header();?>
+	<div id="blackscreen" style="display:none;">
+		<div id="err_mess">
+			<h1>Titre du message</h1>
+			<p>Le texte qui va avec.</p>
+			<input type="button" name="fermer" value="Fermer" onclick="document.getElementById('blackscreen').style.display = 'none'"> 
+		</div>
+	</div>
 	<?php if(isset($_GET["offre"])): ?>
 		<?php
 			$IdOffre = $_GET["offre"];
@@ -13,6 +20,7 @@
 			<H1><?php echo $retour["Intitule"]; ?></H1>
 			<p><b><?php echo $retour["Nom"]; ?></b></p>
 			<p><?php echo $retour["Description"]; ?></p>
+			<input type="button" name="supp" value="Supprimer" onclick="suppr_offre(<?php echo ["IdOffre"]; ?>)" /> 
 		<?php else: ?>
 			<H1>Erreur : la page n'a pas pu être trouvée</H1>
 		<?php endif; ?>

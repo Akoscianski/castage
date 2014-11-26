@@ -5,6 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script src="/js/jQuery.js"></script>
 		<script type="text/javascript" src='/js/notifications.js'></script>
+		<script type="text/javascript" src='/js/global.js'></script>
 		<meta charset="UTF-8">
 	</head>
 	<body>

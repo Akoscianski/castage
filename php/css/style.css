@@ -7,6 +7,30 @@ body{
 	margin : 0;
 	padding : 0;
 }
+#blackscreen{
+	position : fixed;
+	top : -10px;
+	width : 100%;
+	height : 100%;
+	background : rgba(0,0,0,0.5);
+	z-index : 3;
+	text-align : center;
+}
+#err_mess{
+	position : fixed;
+	left : 50%;
+	margin-left : -200px;
+	top : 50%;
+	margin-top : -50px;
+	width : 400px;
+	min-height : 50px;
+	background : rgba(255,255,255,1);
+	border-radius : 10px;
+	border : 3px solid #555555;
+}
+#err_mess h1{
+	color : #000;
+}
 #page{
 	}
 #content{
