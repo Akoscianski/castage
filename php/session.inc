@@ -22,6 +22,13 @@ ini_set('session.use_trans_sid', false); // Prevent php to use sessionID in URL 
 
 session_start();
 
+function connect()
+//Permet la connection à la base de données.
+{
+	$db= mysqli_connect('localhost','castage','castage','castage');
+	return $db;
+}
+
 function allIPs()
 // Returns the IP address of the client (Used to prevent session cookie hijacking.)
 {
@@ -35,14 +42,13 @@ function allIPs()
 function check_auth($login,$password) 
 // Check that user/password is correct.
 {
-	$db= mysql_connect('localhost','castage','castage');
-	mysql_select_db('castage',$db);
+	$db= connect();
 	$sql= 'SELECT IdUser, Nom, Prenom FROM user WHERE Nom=\''.$login.'\' AND Mdp= MD5(\''.$password.'\');';
-	$req = mysql_query($sql);
+	$req = mysqli_query($db,$sql);
 	
-    if (mysql_num_rows($req)==1)
+    if (mysqli_num_rows($req)==1)
     {
-		$data = mysql_fetch_assoc($req);
+		$data = mysqli_fetch_assoc($req);
         $_SESSION['uid'] = sha1(uniqid('',true).'_'.mt_rand()); // generate unique random number (different than phpsessionid)
                                                                 // which can be used to hmac forms and form token (to prevent XSRF)
         $_SESSION['ip']=allIPs();                // We store IP address(es) of the client to make sure session is not hijacked.
@@ -56,6 +62,7 @@ function check_auth($login,$password)
         return False;
     }
 }
+
 
 function check_login()
 // Make sure user is logged in. Redirect to login page if not.
