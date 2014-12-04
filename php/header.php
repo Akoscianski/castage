@@ -9,6 +9,14 @@
 		<meta charset="UTF-8">
 	</head>
 	<body>
+		<div id="blackscreen" style="display:none;">
+			<div id="err_mess">
+				<h1 id="h1_msg">Titre du message</h1>
+				<p id="txt_msg">Le texte qui va avec.</p>
+				<input type="button" id="btn_valider" name="Valider" value="Valider" onclick="" style="display:none;"/>
+				<input type="button" name="fermer" value="Fermer" onclick="document.getElementById('blackscreen').style.display = 'none'"> 
+			</div>
+		</div>
 		<div id="page">
 			<div id="ban">
 				<a href="./index.php">
@@ -38,4 +46,5 @@
 					</div>
 			</div>
 			<div id="content">
+				<div class="clear"></div>
 				<div id="article">
