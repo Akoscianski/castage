@@ -5,10 +5,14 @@ function suppr_offre(objet){
     document.getElementById('btn_valider').style.display = '';
     document.getElementById('btn_valider').onclick = function suppression_offre(){
 		var id = objet.id.replace("offre",""); 
-		$.post('/ajax/delet_offre.php?notif='.id, function(data){
-			//alert(data)
+		$.post("/ajax/delete_offre.php?notif=" + id, function( data ) {
+			document.getElementById('h1_msg').innerHTML = 'Suppression réussie';
+			document.getElementById('txt_msg').innerHTML = 'Votre offre a bien été supprimée.';
+			document.getElementById('btn_valider').style.display = 'none';
+			document.getElementById('btn_fermer').onclick = function revenir_accueil(){
+				window.location.replace("/index.php");
+			}
 		});
-		document.getElementById('blackscreen').style.display = 'none';
 	};
 }
 

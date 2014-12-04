@@ -14,7 +14,7 @@
 				<h1 id="h1_msg">Titre du message</h1>
 				<p id="txt_msg">Le texte qui va avec.</p>
 				<input type="button" id="btn_valider" name="Valider" value="Valider" onclick="" style="display:none;"/>
-				<input type="button" name="fermer" value="Fermer" onclick="document.getElementById('blackscreen').style.display = 'none'"> 
+				<input type="button" id="btn_fermer" name="fermer" value="Fermer" onclick="document.getElementById('blackscreen').style.display = 'none'"> 
 			</div>
 		</div>
 		<div id="page">
