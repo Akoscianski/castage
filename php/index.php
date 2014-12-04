@@ -12,7 +12,7 @@
 			<H1><?php echo $retour["Intitule"]; ?></H1>
 			<p><b><?php echo $retour["Nom"]; ?></b></p>
 			<p><?php echo $retour["Description"]; ?></p>
-			<input type="button" name="supp" value="Supprimer" id="offre<?php echo ["Id Offre"]; ?>" onclick="suppr_offre(this.id)" /> 
+			<input type="button" name="supp" value="Supprimer" id="offre<?php echo $retour["IdOffre"]; ?>" onclick="suppr_offre(this)" /> 
 		<?php else: ?>
 			<H1>Erreur : la page n'a pas pu être trouvée</H1>
 		<?php endif; ?>
