@@ -27,7 +27,7 @@
 		}
 	}
 	
-	$sql = 'INSERT INTO offres_stages (IdUser, Intitule, IdEntreprise, Description) VALUES ('.$IdUser.',\''.$intitule.'\','.$IdEntreprise.',\''.$description.'\');';
+	$sql = 'INSERT INTO offres_stages (IdUser, Intitule, IdEntreprise, Description, ODate) VALUES ('.$IdUser.',\''.$intitule.'\','.$IdEntreprise.',\''.$description.'\',NOW());';
 	$req = mysqli_query($db,$sql);
 	if($req){//insertion dans la base de donnée sans problème
 		$notification =htmlentities("Votre proposition d'offre de stage \"".html_entity_decode($intitule, ENT_QUOTES)."\" a bien été enregistrée.", ENT_QUOTES);

@@ -9,6 +9,7 @@ CREATE TABLE offres_stages(
 	Intitule varchar(50) NOT NULL,
 	IdEntreprise INT NOT NULL,
 	Description TEXT NOT NULL,
+	ODate DATE NOT NULL,
 	FOREIGN KEY (IdUser) REFERENCES user(IdUser),
 	FOREIGN KEY (IdEntreprise) REFERENCES entreprise(IdEntreprise)
 	);

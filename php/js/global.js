@@ -16,3 +16,14 @@ function suppr_offre(objet){
 	};
 }
 
+function demande_validation(objet){
+	var id = objet.id.replace("valid","");
+	$.post("/ajax/demande_validation.php?offre=" + id, function( data ) {
+		document.getElementById('blackscreen').style.display = '';
+		document.getElementById('h1_msg').innerHTML = 'Validation en attente';
+		document.getElementById('txt_msg').innerHTML = 'Une demande de validation a été envoyée pour cette offre.'
+		document.getElementById('btn_fermer').onclick = function revenir_accueil(){
+			window.location.replace("/index.php");
+		}
+	});
+}

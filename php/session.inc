@@ -43,7 +43,7 @@ function check_auth($login,$password)
 // Check that user/password is correct.
 {
 	$db= connect();
-	$sql= 'SELECT IdUser, Nom, Prenom FROM user WHERE Nom=\''.$login.'\' AND Mdp= MD5(\''.$password.'\');';
+	$sql= 'SELECT IdUser, Nom, Prenom, TUser FROM user WHERE Nom=\''.$login.'\' AND Mdp= MD5(\''.$password.'\');';
 	$req = mysqli_query($db,$sql);
 	
     if (mysqli_num_rows($req)==1)
@@ -55,6 +55,7 @@ function check_auth($login,$password)
         $_SESSION['username']=$data['Prenom'];
         $_SESSION['id']=$data['IdUser'];
         $_SESSION['expires_on']=time()+INACTIVITY_TIMEOUT;  // Set session expiration.
+        $_SESSION['type']=$data['TUser'];
         return True;
     }
     else

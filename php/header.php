@@ -21,20 +21,28 @@
 			<div id="ban">
 				<a href="./index.php">
 					<h1>Cas Stage</h1>
-					<p>Connecté en tant que <?php echo $_SESSION['username']; ?>, id : <?php echo $_SESSION['id']; ?></p>
+					<p>Connecté en tant que <?php echo $_SESSION['username']; ?>, id : <?php echo $_SESSION['id']; ?> <?php if($_SESSION['type'] == 'admin'){echo "Connecté en tant que Administrateur"; } ?> </p>
 				</a>
 					<div id="menunotif">
 						<div id="butnotif" onClick="javascript:btn_notif();" >0 Notifications</div>
 					</div>
 					<div id="listenotif" style="display:none;">
 						<?php
-							$db= mysql_connect('localhost','castage','castage');
-							mysql_select_db('castage',$db);
+							$db= connect();
+							if($_SESSION['type'] == "admin"){
+								/* Compter les notifications en broadcast */
+								$sql="SELECT COUNT(*) FROM demande_validation d WHERE NOT EXISTS(SELECT IdOffre FROM validation v WHERE v.IdOffre = d.IdOffre);";
+								$requete=mysqli_query($db,$sql);
+								$retourner=mysqli_fetch_array($requete, MYSQL_BOTH);
+								if($retourner[0] > 0){
+									echo '<div class="notification0" id="BCdemandes" onClick="javascript:read_notif(\'notifBC\');">Des demandes de validation sont en attente.</div>';
+								}
+							}
 							$sql="SELECT IdNotif, Vu, notification FROM notif WHERE IdUser = ".$_SESSION['id']." ORDER BY NDate DESC LIMIT 10;";
-							$req=mysql_query($sql);
-							if(mysql_num_rows($req) > 0){
-								while($retour=mysql_fetch_array($req, MYSQL_BOTH)){
-									echo '<div class="notification'.$retour['Vu'].'" id="notif'.$retour['IdNotif'].'" onClick="javascript:read_notif(\'notif'.$retour['IdNotif'].'\');">'.$retour['notification'].'</div>';
+							$req=mysqli_query($sql);
+							if(mysqli_num_rows($req) > 0){
+								while($retourner=mysqli_fetch_array($req, MYSQL_BOTH)){
+									echo '<div class="notification'.$retourner['Vu'].'" id="notif'.$retourner['IdNotif'].'" onClick="javascript:read_notif(\'notif'.$retourner['IdNotif'].'\');">'.$retourner['notification'].'</div>';
 								}
 							}else{
 								echo "<p>Vous n'avez pas de notification</p>";
