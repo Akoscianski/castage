@@ -39,18 +39,15 @@
 								}
 							}
 							$sql="SELECT IdNotif, Vu, notification FROM notif WHERE IdUser = ".$_SESSION['id']." ORDER BY NDate DESC LIMIT 10;";
-							$req=mysqli_query($sql);
+							$req=mysqli_query($db, $sql);
 							if(mysqli_num_rows($req) > 0){
-								while($retourner=mysqli_fetch_array($req, MYSQL_BOTH)){
-									echo '<div class="notification'.$retourner['Vu'].'" id="notif'.$retourner['IdNotif'].'" onClick="javascript:read_notif(\'notif'.$retourner['IdNotif'].'\');">'.$retourner['notification'].'</div>';
+								while($ret=mysqli_fetch_array($req, MYSQL_BOTH)){
+									echo '<div class="notification'.$ret['Vu'].'" id="notif'.$ret['IdNotif'].'" onClick="javascript:read_notif(\'notif'.$ret['IdNotif'].'\');">'.$ret['notification'].'</div>';
 								}
 							}else{
 								echo "<p>Vous n'avez pas de notification</p>";
 							}
 						?>
-						<!--<div class="notification">Et encore une notification encore plus longue que la précédente par ce que voilà quoi, il faut bien voir ce que celà donne si ça dépasse du cadre par ce que j'aime bien mettre des notifications dx fois plus longues que les notifs normales !</div>
-						<div class="notification">notif 1</div>
-						<div class="notification">Une autre notification un peu plus longue par ce que j'ai quand même prévu de pouvoir en mettre pas mal là dedans...</div>-->
 					</div>
 			</div>
 			<div id="content">
