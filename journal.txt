@@ -64,4 +64,5 @@
 17/11/2014 - Arnaud,Anis,Emmanuel : 3ème séance avec le professeur
 	2 remarques sur le contenu proposé par Arnaud : - Mettre un message pour une offre de stage enregistrée
 							- Proposition de créer un répertoire pour une interaction au lieu de répertoires pour chaques types de fichiers.
-19/11/2014 - Anis : Installation environnement logiciel
+19/11/2014 - Anis : Installation environnement logiciel MEGA
+15/12/2014 - Anis,Arnaud,Emmanuel : Fin de collection des interactions à partir du sujet. Début de la modélisation sous MEGA. Avancement sur l'interface 		     administrateur.
