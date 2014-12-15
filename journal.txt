@@ -65,4 +65,5 @@
 	2 remarques sur le contenu proposé par Arnaud : - Mettre un message pour une offre de stage enregistrée
 							- Proposition de créer un répertoire pour une interaction au lieu de répertoires pour chaques types de fichiers.
 19/11/2014 - Anis : Installation environnement logiciel MEGA
-15/12/2014 - Anis,Arnaud,Emmanuel : Fin de collection des interactions à partir du sujet. Début de la modélisation sous MEGA. Avancement sur l'interface 		     administrateur.
+15/12/2014 - Anis,Arnaud,Emmanuel : Fin de collection des interactions à partir du sujet. Début de la modélisation sous MEGA. Avancement sur l'interface administrateur.
+	_Pas de suppression parce qu'il y a possibilité de faire des mesures sur les insertions. CLHYPS dit que si on a passé les conditions de recevabilité on a accepté l'existance de l'objet, le supprimer reviendrait à réfuter l'existance de cet objet.
