@@ -62,8 +62,11 @@
 16/11/2014 - Arnaud : début de l'implémentation des notifications
 16/11/2014 - Arnaud : Implémentation des notifications finie.
 17/11/2014 - Arnaud,Anis,Emmanuel : 3ème séance avec le professeur
-	2 remarques sur le contenu proposé par Arnaud : - Mettre un message pour une offre de stage enregistrée
+	_2 remarques sur le contenu proposé par Arnaud : - Mettre un message pour une offre de stage enregistrée
 							- Proposition de créer un répertoire pour une interaction au lieu de répertoires pour chaques types de fichiers.
 19/11/2014 - Anis : Installation environnement logiciel MEGA
 15/12/2014 - Anis,Arnaud,Emmanuel : Fin de collection des interactions à partir du sujet. Début de la modélisation sous MEGA. Avancement sur l'interface administrateur.
 	_Pas de suppression parce qu'il y a possibilité de faire des mesures sur les insertions. CLHYPS dit que si on a passé les conditions de recevabilité on a accepté l'existance de l'objet, le supprimer reviendrait à réfuter l'existance de cet objet.
+16/12/2014 - Anis,Arnaud,Emmanuel : 4ème séance avec le professeur + travail en équipe.
+	_Quelles peuvent-être les différentes règles de recevabilité pour un envoi de rapport?
+	_Un envoi implique-t-il l'enregistrement par le destinataire des documents envoyés?
