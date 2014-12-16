@@ -6,6 +6,15 @@
 			 * 
 			 *  Affichage d'une offre passée en paramètre de l'adresse 
 			 * 
+			 * A faire : demande de validation
+			 * 			- demande de convention
+			 * 			- Validation / Refu de l'offre	(ADMIN)
+			 * 			- Ajoute de commentaire pour converser
+			 *          - Modification de l'offre
+			 * 			- Demande annulation de validation
+			 * 			- Acceptation convention	(ADMIN)
+			 * 			- Affectation tuteur
+			 * 			- Interruption du stage
 			 */
 			/* recupération des informations de l'offre */
 			$IdOffre = $_GET["offre"];
