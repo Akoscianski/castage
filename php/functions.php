@@ -85,6 +85,7 @@ function aff_offre($argument){
 					}
 				}
 				echo '</p>';
+				commentaires($IdOffre);
 		}else{
 			/* Le paramètre entré ne correspond pas à une offre autorisée */
 			echo "<H1>Erreur : la page n'a pas pu être trouvée</H1>";
@@ -123,7 +124,6 @@ function les_offres(){
 		echo '<div id="-1">';
 		echo "<p>Vous n'avez pas encore ajouté d'offres de stage</p></div>";
 	}
-	return 0;
 }
 
 function les_offres_en_validation(){
@@ -188,6 +188,32 @@ function les_valides(){
 	}else{
 		echo '<div id="-1">';
 		echo "<h3>Vous n'avez pas d'offre de stage validée.</h3></div>";
+	}
+}
+
+function commentaires($IdOffre){
+	echo '<div id="commentaires">';
+		les_commentaires($IdOffre);
+	echo '</div>';
+	echo '<form name="newcom" action="" onSubmit="return false"><table>
+			<tr><td></td><textarea name="new_com" id="new_com" rows=5 COLS=80></textarea></td></tr>
+			<tr><td><input type="submit" id="newcom'.$IdOffre.'&user'.$_SESSION['id'].'" value="Envoyer" onClick="addCom(this)" onSubmit="return false"/></td></tr>
+		</table></form>';
+}
+
+function les_commentaires($IdOffre){
+	$db= connect();
+	$sql = 'SELECT c.Com, u.Nom, u.Prenom, c.CDate FROM commentaires_offres c, user u WHERE IdOffre = '.$IdOffre.' AND u.IdUser = c.IdUser;';
+	$req=mysqli_query($db,$sql);
+	if(mysqli_num_rows($req) > 0){
+		while($retour=mysqli_fetch_array($req, MYSQL_BOTH)){
+			echo "<div calss='commentaire'>
+					<p><b>Le ".$retour['CDate']." par ".$retour['Prenom']." ".$retour['Nom']."</b></p>
+					<p><i>".$retour['Com']."</i></p>
+				</div>";
+		}
+	}else{
+		echo "<div calss='commentaire'>Il n'y a pas encore de commentaire pour cette offre.</div>";
 	}
 }
 ?>

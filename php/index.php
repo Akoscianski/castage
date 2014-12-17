@@ -1,4 +1,5 @@
 <?php include("./functions.php"); ?>
+<script type="text/javascript" src='/js/commentaires.js'></script>
 <?php get_header();?>
 <?php 
 			/*
